@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { heroImages } from '../../helpers/imageHelper'
 
 export const HeroCard = ({ hero }) => {
     return (
         <div className="card ms-3" style={{ maxWidth: 540 }}>
             <div className="row no-gutters">
                 <div className="col-md-4">
-                    <img src={`./assets/${hero.id}.jpg`} className="card-img" alt={hero.superhero} />
+                    <img src={heroImages(`./${hero.id}.jpg`)} className="card-img" alt={hero.superhero} />
                 </div>
                 <div className="col-md-8">
                     <div className="card-body">
